@@ -146,7 +146,7 @@ namespace OOPLabsForms
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 26);
             this.label5.TabIndex = 9;
-            this.label5.Text = "kg";
+            this.label5.Text = "g";
             // 
             // label6
             // 
