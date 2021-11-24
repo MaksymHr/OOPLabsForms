@@ -10,8 +10,8 @@ namespace OOPLabsForms
         private void button1_Click(object sender, EventArgs e)
         {
             string Name = textBox1.Text;
-            string Weight = textBox2.Text;
-            int Cost = Convert.ToInt32(textBox3.Text);
+            double Weight = Convert.ToDouble(textBox2.Text);
+            double Cost = Convert.ToDouble(textBox3.Text);
             string Status = comboBox1.Text;
         }
     }
