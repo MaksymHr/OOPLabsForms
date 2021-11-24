@@ -144,7 +144,7 @@ namespace OOPLabsForms
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(148, 153);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 26);
+            this.label5.Size = new System.Drawing.Size(23, 26);
             this.label5.TabIndex = 9;
             this.label5.Text = "g";
             // 
@@ -206,7 +206,7 @@ namespace OOPLabsForms
             this.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
-            this.Text = "Вимірювальні прилади";
+            this.Text = "Measuring Instruments";
             this.ResumeLayout(false);
             this.PerformLayout();
 
