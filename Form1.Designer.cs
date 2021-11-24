@@ -1,4 +1,6 @@
-﻿namespace OOPLabsForms
+﻿using System.ComponentModel;
+
+namespace OOPLabsForms
 {
     partial class Form1
     {
@@ -6,6 +8,8 @@
         ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
+        BindingList<Device> devices = new BindingList<Device>();
 
         /// <summary>
         ///  Clean up any resources being used.
@@ -39,6 +43,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -150,11 +157,41 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "$";
             // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(44, 388);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(193, 26);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Notes: " + Convert.ToString(devices.Count);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 26;
+            this.listBox1.Location = new System.Drawing.Point(44, 417);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(193, 186);
+            this.listBox1.TabIndex = 12;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(252, 549);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(192, 54);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "View info";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 632);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
@@ -188,5 +225,8 @@
         private Button button1;
         private Label label5;
         private Label label6;
+        private Label label7;
+        private ListBox listBox1;
+        private Button button2;
     }
 }
