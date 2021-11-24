@@ -176,7 +176,7 @@ namespace OOPLabsForms
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(252, 549);
+            this.button2.Location = new System.Drawing.Point(243, 549);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(192, 54);
             this.button2.TabIndex = 13;
@@ -188,7 +188,7 @@ namespace OOPLabsForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 632);
+            this.ClientSize = new System.Drawing.Size(471, 625);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label7);
