@@ -1,0 +1,24 @@
+Main info:
+Name: Phone
+Weight: 120 g
+Cost: 350$
+Status: Functional
+
+Main info:
+Name: Notebook
+Weight: 1500 g
+Cost: 3200$
+Status: Turned off
+
+Main info:
+Name: TV
+Weight: 5300 g
+Cost: 2000$
+Status: Broken
+
+Main info:
+Name: Tablet
+Weight: 500 g
+Cost: 1000$
+Status: Turned on
+
