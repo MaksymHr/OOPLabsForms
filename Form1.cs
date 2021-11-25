@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace OOPLabsForms
 {
@@ -138,11 +139,55 @@ namespace OOPLabsForms
                 }
 
                 this.label7.Text = "Notes: " + Convert.ToString(devices.Count);
+                MessageBox.Show("Succesfull");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
                 return;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string path = @$"C:\Users\maksi\source\repos\OOPLabsForms\{textBox6.Text}.dat";
+
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+                    bf.Serialize(fs, devices);
+                
+                //using (BinaryWriter bw = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate)))
+                //    foreach (Device device in devices)
+                //        bw.Write(device.Info());
+                
+                MessageBox.Show("Succesfull");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string path = @$"C:\Users\maksi\source\repos\OOPLabsForms\{textBox7.Text}.dat";
+
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                using (FileStream fs = new FileStream(path, FileMode.Open))
+                    devices = (BindingList<Device>)bf.Deserialize(fs);
+
+                this.label7.Text = "Notes: " + Convert.ToString(devices.Count);
+                MessageBox.Show("Succesfull");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
             }
         }
     }

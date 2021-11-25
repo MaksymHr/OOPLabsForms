@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPLabsForms
 {
+    [Serializable]
     internal class Device
     {
         public string Name { get; set; }

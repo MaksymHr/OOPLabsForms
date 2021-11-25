@@ -57,6 +57,10 @@ namespace OOPLabsForms
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -242,8 +246,9 @@ namespace OOPLabsForms
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             this.timer1.Start();
             // 
             // label9
@@ -289,11 +294,49 @@ namespace OOPLabsForms
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(505, 365);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(295, 34);
+            this.textBox6.TabIndex = 23;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(505, 502);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(295, 34);
+            this.textBox7.TabIndex = 24;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(505, 405);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(295, 64);
+            this.button5.TabIndex = 25;
+            this.button5.Text = "Export to .dat file";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(505, 542);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(295, 64);
+            this.button6.TabIndex = 26;
+            this.button6.Text = "Import from .dat file";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 693);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -352,5 +395,9 @@ namespace OOPLabsForms
         private TextBox textBox4;
         private TextBox textBox5;
         private Button button4;
+        private TextBox textBox6;
+        private TextBox textBox7;
+        private Button button5;
+        private Button button6;
     }
 }
