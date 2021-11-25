@@ -44,7 +44,7 @@ namespace OOPLabsForms
             return
                 $"Main info:\n" +
                 $"Name: {this.Name}\n" +
-                $"Weight: {this.Weight} kg\n" +
+                $"Weight: {this.Weight} g\n" +
                 $"Cost: {this.Cost}$\n" +
                 $"Status: {this.Status}\n";
         }
