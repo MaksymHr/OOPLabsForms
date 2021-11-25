@@ -52,6 +52,11 @@ namespace OOPLabsForms
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -239,11 +244,59 @@ namespace OOPLabsForms
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(473, 8);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 676);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(505, 72);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(295, 64);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Export to .txt file";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(505, 32);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(295, 34);
+            this.textBox4.TabIndex = 20;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(505, 172);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(295, 34);
+            this.textBox5.TabIndex = 21;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(505, 213);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(295, 64);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Import from .txt file";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 693);
+            this.ClientSize = new System.Drawing.Size(817, 693);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
@@ -292,5 +345,10 @@ namespace OOPLabsForms
         private RadioButton radioButton3;
         private Label label8;
         private System.Windows.Forms.Timer timer1;
+        private Label label9;
+        private Button button3;
+        private TextBox textBox4;
+        private TextBox textBox5;
+        private Button button4;
     }
 }

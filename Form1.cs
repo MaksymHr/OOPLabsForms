@@ -24,7 +24,7 @@ namespace OOPLabsForms
                 this.label7.Text = "Notes: " + Convert.ToString(devices.Count);
 
                 foreach (var it in Controls)
-                    if (it is TextBox) ((TextBox)it).Text = string.Empty;
+                    if (it is TextBox && it != textBox4) ((TextBox)it).Text = string.Empty;
 
                 listBox1.DataSource = devices;
                 listBox1.DisplayMember = "Name";
@@ -97,6 +97,54 @@ namespace OOPLabsForms
             });
             for (int i = 0; i < list.Count; i++)
                 devices[i] = list[i];
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string path = @$"C:\Users\maksi\source\repos\OOPLabsForms\{textBox4.Text}.txt";
+
+            using (StreamWriter sw = new StreamWriter(path, false))
+            {
+                foreach (Device device in devices)
+                    sw.WriteLine(device.Info());
+                MessageBox.Show("Succesfull");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string path = @$"C:\Users\maksi\source\repos\OOPLabsForms\{textBox5.Text}.txt";
+
+            try
+            {
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    string line;
+                    List<string> lines = new List<string>();
+
+                    while ((line = sr.ReadLine()) != null)
+                        lines.Add(line);
+
+                    //MessageBox.Show(String.Join("\n", lines));
+
+                    devices.Clear();
+
+                    for (int i = 0; i < lines.Count; i += 6)
+                    {
+                        devices.Add(new Device(
+                            lines[i + 1].Substring(5),
+                            lines[i + 2].Substring(7),
+                            lines[i + 3].Substring(5),
+                            lines[i + 4].Substring(7)
+                        ));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
         }
     }
 }

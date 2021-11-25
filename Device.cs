@@ -34,6 +34,14 @@ namespace OOPLabsForms
             Status = _status;
         }
 
+        public Device(string _name, string _weight, string _cost, string _status)
+        {
+            Name = _name;
+            Weight = Convert.ToDouble(_weight.Trim(new char[] {'g', ' '}));
+            Cost = Convert.ToDouble(_cost.Trim(new char[] {'$', ' '}));
+            Status = _status;
+        }
+
         public void AddToList(List<Device> list)
         {
             return;
@@ -44,7 +52,7 @@ namespace OOPLabsForms
             return
                 $"Main info:\n" +
                 $"Name: {this.Name}\n" +
-                $"Weight: {this.Weight} kg\n" +
+                $"Weight: {this.Weight} g\n" +
                 $"Cost: {this.Cost}$\n" +
                 $"Status: {this.Status}\n";
         }
