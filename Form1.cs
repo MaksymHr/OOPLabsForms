@@ -25,7 +25,7 @@ namespace OOPLabsForms
                 this.label7.Text = "Notes: " + Convert.ToString(devices.Count);
 
                 foreach (var it in Controls)
-                    if (it is TextBox && it != textBox4) ((TextBox)it).Text = string.Empty;
+                    if (it is TextBox) ((TextBox)it).Text = string.Empty;
 
                 listBox1.DataSource = devices;
                 listBox1.DisplayMember = "Name";
