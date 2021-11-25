@@ -28,9 +28,6 @@ namespace OOPLabsForms
 
                 listBox1.DataSource = devices;
                 listBox1.DisplayMember = "Name";
-
-                timer1.Interval = 1000;
-                timer1.Start();
             }
             catch (Exception ex)
             {
@@ -139,6 +136,8 @@ namespace OOPLabsForms
                         ));
                     }
                 }
+
+                this.label7.Text = "Notes: " + Convert.ToString(devices.Count);
             }
             catch (Exception ex)
             {
